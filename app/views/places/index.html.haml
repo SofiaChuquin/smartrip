@@ -1,11 +1,11 @@
 %h1 Lugares
-%table
-  %tr
-    %td Nombre
-    %td Latitud
-    %td Longitud
-  - @places.each do |place|
-    %tr
-      %td= place.name
-      %td= place.latitude
-      %td= place.longitude
+.map-container{ :style => 'width:800px' }
+  #map{ :style => 'width:800px; height:400px;' }
+
+:javascript
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(#{raw @hash.to_json});
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  });

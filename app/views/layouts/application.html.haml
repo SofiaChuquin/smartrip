@@ -3,8 +3,14 @@
   %head
     %title Smartrip
     = csrf_meta_tags
+    
+    %script{ :src => '//maps.google.com/maps/api/js?key=AIzaSyDSjA6HC0LdAnMjrt9PhThqPLPQCBxVto8' }
+    %script{ :type => "text/javascript", :src => '//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js' }
+    %script{ :type => "text/javascript", :src => '//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' }
+
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
 
     %body
       %header
