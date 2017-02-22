@@ -3,7 +3,7 @@
   %head
     %title Smartrip
     = csrf_meta_tags
-    
+
     %script{ :src => '//maps.google.com/maps/api/js?key=AIzaSyDSjA6HC0LdAnMjrt9PhThqPLPQCBxVto8' }
     %script{ :type => "text/javascript", :src => '//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js' }
     %script{ :type => "text/javascript", :src => '//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' }
@@ -14,5 +14,5 @@
 
     %body
       %header
-        =image_tag "logo.png"
+        %img{ :src=>'http://localhost:3000/assets/logo-1871483049d4a1d5e8f9913b04a07399c3be6af43dff2e0afc77f58f6c2fca91.png', :style=> 'display: block; margin-left: auto; margin-right: auto; width:100px; height:100px;' }
       = yield
