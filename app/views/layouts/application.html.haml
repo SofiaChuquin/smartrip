@@ -14,5 +14,6 @@
 
     %body
       %header
-        %img{ :src=>'http://localhost:3000/assets/logo-1871483049d4a1d5e8f9913b04a07399c3be6af43dff2e0afc77f58f6c2fca91.png', :style=> 'display: block; margin-left: auto; margin-right: auto; width:100px; height:100px;' }
-      = yield
+        = image_tag "logo.png"
+      .container
+        = yield
