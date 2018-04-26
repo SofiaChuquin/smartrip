@@ -6,6 +6,5 @@ class PlacesController < ApplicationController
       marker.lng place.longitude.to_s('F')
       marker.infowindow place.name
     end
-    p @hash.inspect + '==============='
   end
 end
